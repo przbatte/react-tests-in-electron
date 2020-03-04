@@ -1,0 +1,1 @@
+This project was created to show case use of jest-electron.
