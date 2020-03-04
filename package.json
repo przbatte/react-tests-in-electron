@@ -37,7 +37,7 @@
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
-    "jest-electron": "github:przbatte/jest-electron#project-specific",
+    "jest-electron": "github:przbatte/jest-electron#513ea74c542fd35ca754092dd505828c3ac2ed7f",
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
