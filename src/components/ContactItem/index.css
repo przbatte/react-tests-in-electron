@@ -1,0 +1,28 @@
+.contact {
+  background-color: #CCCCCC;
+  border-top: 1px solid #A3A3A3;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  padding: .5em 0;
+}
+
+.contact-avatar {
+  font-size: 1rem;
+  padding: 0 .5em;
+}
+.contact-avatar--image {
+  border-radius: 100px;
+  border: 1px solid #A3A3A3;
+  
+  width: 40px;
+  height: 40px;
+}
+
+.contact-details {
+  flex-grow: 1;
+}
+
+.contant-details--name {
+  font-weight: bold;
+}
