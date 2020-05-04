@@ -1,0 +1,30 @@
+.checkbox--checked-icon {
+  background-color: #1C4CAA;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: .3em;
+  padding-left: 0;
+}
+
+.checkbox-label > div {
+  border: 1px solid;
+  border-color: #CCCCCC;
+  height: 20px;
+  margin-right: 5px;
+  padding: 0 2px;
+  width: 20px;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.checkbox-input:checked + label.checkbox-label div {
+  border-color: #1C4CAA;
+}

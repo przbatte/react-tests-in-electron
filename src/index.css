@@ -1,2 +1,7 @@
-html { font-size: 62.5%; } /* Essentially 10px */
-body { font-size: 1.6rem; } /* Essentially 16px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
