@@ -1,6 +1,6 @@
 import React from 'react'
 import {render, fireEvent, cleanup} from '@testing-library/react'
-import InputCheckBox from './index'
+import Checkbox from './index'
 
 import '../../index.css'
 
@@ -8,21 +8,20 @@ const click = input => fireEvent.click(input)
 
 const createInitialProps = overrides => {
   return {
-    id: 'contact-0',
-    isChecked: false,
+    id: 'checkbox-0',
     label: 'label text',
-    onChange: () => {},
+    onCheckedChange: () => {},
     ...overrides,
   }
 }
 
 const renderWithProps = (props = createInitialProps()) => {
   return {
-    ...render(<InputCheckBox {...props} />)
+    ...render(<Checkbox {...props} />)
   }
 }
 
-describe('InputCheckBox component', () => {
+describe('Checkbox component', () => {
   afterEach(cleanup)
 
   it('should show not checked checkbox', () => {
@@ -32,15 +31,25 @@ describe('InputCheckBox component', () => {
     expect(input.checked).toEqual(false)
   })
 
-  it('should call onChange handler if the label is clicked', () => {
+  it('should show checked checkbox', () => {
     const initialProps = createInitialProps({
-      onChange: jest.fn()
+      checked: true,
+    })
+    const {getByTestId} = renderWithProps(initialProps)
+    const input = getByTestId(`${initialProps.id}-input`)
+    expect(input.checked).toEqual(false)
+  })
+
+  it('should call onCheckedChange handler if the label is clicked', () => {
+    const initialProps = createInitialProps({
+      onCheckedChange: jest.fn()
     })
     const {getByLabelText} = renderWithProps(initialProps)
 
     const checkboxLabel = getByLabelText(initialProps.label)
     click(checkboxLabel)
 
-    expect(initialProps.onChange).toHaveBeenCalledTimes(1)
+    expect(initialProps.onCheckedChange).toHaveBeenCalledTimes(1)
+    expect(initialProps.onCheckedChange).toHaveBeenCalledWith(true)
   })
 })
