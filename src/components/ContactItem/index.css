@@ -14,9 +14,8 @@
 .contact-avatar--image {
   border-radius: 100px;
   border: 1px solid #A3A3A3;
-  
-  width: 40px;
   height: 40px;
+  width: 40px;
 }
 
 .contact-details {
@@ -25,4 +24,11 @@
 
 .contant-details--name {
   font-weight: bold;
+}
+
+.contact-status {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  padding: 0 .5em;
 }

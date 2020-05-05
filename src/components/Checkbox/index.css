@@ -1,24 +1,27 @@
 .checkbox--checked-icon {
   background-color: #1C4CAA;
   display: inline-block;
-  height: 10px;
-  width: 10px;
+  font-size: 1rem;
+  height: 1em;
+  width: 1em;
 }
 
 .checkbox-label {
   cursor: pointer;
   display: flex;
-  margin-bottom: .3em;
+  font-size: 1rem;
   padding-left: 0;
 }
 
 .checkbox-label > div {
+  align-items: center;
   border: 1px solid;
-  border-color: #CCCCCC;
-  height: 20px;
-  margin-right: 5px;
-  padding: 0 2px;
-  width: 20px;
+  border-color: rgb(116, 116, 116);
+  display: flex;
+  font-size: 1rem;
+  height: 2em;
+  justify-content: center;
+  width: 2em;
 }
 
 .checkbox-input {

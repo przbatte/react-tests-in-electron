@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css'
+import Checkbox from '../Checkbox'
 
 function ContactItem (props) {
   const {id = 0, firstName, lastName, email = ''} = props.contactDetails
@@ -17,9 +18,15 @@ function ContactItem (props) {
           {email}
         </div>
       </div>
-      <div className="contact-status">checkbox</div>
+      <div className="contact-status">
+        <Checkbox id={`contact-${id}`} />
+      </div>
     </div>
   )
+}
+
+ContactItem.defaultProps = {
+  selected: false,
 }
 
 export default ContactItem

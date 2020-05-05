@@ -25,7 +25,7 @@ const renderWithProps = (props = createInitialProps()) => {
 
 describe('ContactItem component', () => {
 
-  it('should render contact detials ', () => {
+  it('should render contact detials', () => {
     const initialProps = createInitialProps()
     const {getByTestId} = renderWithProps(initialProps)
 
@@ -34,5 +34,5 @@ describe('ContactItem component', () => {
     
     const email = getByTestId(`contact-details--email-${initialProps.contactDetails.id}`)
     expect(email).toHaveTextContent(/^test@test.com$/)
-  })  
+  })
 })
